@@ -111,3 +111,19 @@ GROUP BY
     department
 HAVING
     AVG(salary) > 65000;
+
+USE practice_db2;
+
+-- Give a 10% salary bump to all IT employees
+UPDATE employees
+SET salary = salary * 1.10
+WHERE department = 'IT';
+
+-- Add a new column 'email' to the employees table
+ALTER TABLE employees
+ADD COLUMN email VARCHAR(100);
+
+-- Update email address for an employee
+UPDATE employees
+SET email = 'john.doe@company.com'
+WHERE emp_id = 1;
